@@ -2,13 +2,13 @@ import TitleBar from './TitleBar';
 import ReactDOM from 'react-dom';
 import videojs from 'video.js';
 import React from 'react';
+import './TitleBar.css';
 
 const vjsComponent = videojs.getComponent('Component');
 
 class vjsTitleBar extends vjsComponent{
 
   constructor(player, options) {
-    console.log("Player > ", player, "options > ", options)
     super(player, options);
 
     /* Bind the current class context to the mount method */
@@ -33,7 +33,6 @@ class vjsTitleBar extends vjsComponent{
    * vjsComponent class that this class is extending.
    */
     mount() {
-      console.log("MOUNT titleBar ", this)
       let title = this.player_.cache_.source.src.slice(this.player_.cache_.source.src.lastIndexOf('/') + 1);
       ReactDOM.render(<TitleBar vjsComponent={this} body={title} />, this.el() );
     }

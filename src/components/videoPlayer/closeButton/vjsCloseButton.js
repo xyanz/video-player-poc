@@ -32,7 +32,6 @@ class vjsCloseButton extends vjsComponent{
    * vjsComponent class that this class is extending.
    */
     mount() {
-      console.log("MOUNT close button ", this)
       ReactDOM.render(<CloseButton vjsComponent={this} />, this.el() );
     }
   }

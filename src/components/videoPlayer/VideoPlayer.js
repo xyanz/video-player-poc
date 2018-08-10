@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import videojs from 'video.js';
 import 'C:/Users/yzhuk/Documents/React/video-player-poc/node_modules/video.js/dist/video-js.css';
-import vjsTitleBar from './vjsTitleBar';
+import vjsTitleBar from './titleBar/vjsTitleBar';
 import vjsCloseButton from './closeButton/vjsCloseButton';
 // import vjsEpisodeList from './episodeList/vjsEpisodeList';
+import './VideoPlayer.css';
 
 class VideoPlayer extends Component {
     state = { 
@@ -20,6 +21,8 @@ class VideoPlayer extends Component {
         });
         this.player.addChild('vjsTitleBar', {});
         this.player.getChild('vjsTitleBar').addChild('vjsCloseButton', {})
+        this.player.getChild('controlBar').removeChild('progressControl')
+        this.player.getChild('textTrackDisplay').addChild('progressControl')
         // this.player.getChild('controlBar').addChild('vjsEpisodeList', {});
       } 
       // destroy player on unmount
