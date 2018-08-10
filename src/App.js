@@ -11,7 +11,11 @@ class App extends Component {
       controls: true,
       fluid: true,
       sources: [{
-        src: 'https://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_10mb.mp4',
+        src: 'http://mirrors.standaloneinstaller.com/video-sample/jellyfish-25-mbps-hd-hevc.mp4',
+        type: 'video/mp4'
+      },
+      {
+        src: '//vjs.zencdn.net/v/oceans.mp4',
         type: 'video/mp4'
       }]
     }
