@@ -7,6 +7,11 @@
     width: 100%;
     height: unset;
 }
+.video-js.vjs-user-inactive .vjs-progress-control  {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .5s, opacity .5s;
+}
 .video-js .vjs-progress-holder {
     height: 1em;
 }
