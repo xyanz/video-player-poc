@@ -21,8 +21,8 @@ class VideoPlayer extends Component {
         });
         this.player.addChild('vjsTitleBar', {});
         this.player.getChild('vjsTitleBar').addChild('vjsCloseButton', {})
-        this.player.getChild('controlBar').removeChild('progressControl')
-        this.player.getChild('textTrackDisplay').addChild('progressControl')
+        // this.player.getChild('controlBar').removeChild('progressControl')
+        // this.player.getChild('textTrackDisplay').addChild('progressControl')
         // this.player.getChild('controlBar').addChild('vjsEpisodeList', {});
       } 
       // destroy player on unmount

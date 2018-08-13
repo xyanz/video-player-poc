@@ -2,15 +2,16 @@
   .video-js .vjs-title-bar {
     background: rgba(0, 35, 69, 0.9);
     color: white;
-    font-family: Roboto Regular;
+    font-family: Roboto;
     
     /*
       By default, do not show the title bar.
     */
     text-align: left;
     display: none;
-    font-size: 2em;
-    padding: .5em;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1em;
     height: 40px;
     position: absolute;
     top: 0;
