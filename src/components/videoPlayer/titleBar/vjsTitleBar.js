@@ -2,7 +2,7 @@ import TitleBar from './TitleBar';
 import ReactDOM from 'react-dom';
 import videojs from 'video.js';
 import React from 'react';
-import './TitleBar.css';
+import '../VideoPlayer.css';
 
 const vjsComponent = videojs.getComponent('Component');
 

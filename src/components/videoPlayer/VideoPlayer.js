@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import videojs from 'video.js';
 import 'C:/Users/yzhuk/Documents/React/video-player-poc/node_modules/video.js/dist/video-js.css';
 import vjsTitleBar from './titleBar/vjsTitleBar';
-import vjsCloseButton from './closeButton/vjsCloseButton';
 // import vjsEpisodeList from './episodeList/vjsEpisodeList';
 import './VideoPlayer.css';
 
@@ -20,10 +19,6 @@ class VideoPlayer extends Component {
           console.log('onPlayerReady', this)
         });
         this.player.addChild('vjsTitleBar', {});
-        this.player.getChild('vjsTitleBar').addChild('vjsCloseButton', {})
-        // this.player.getChild('controlBar').removeChild('progressControl')
-        // this.player.getChild('textTrackDisplay').addChild('progressControl')
-        // this.player.getChild('controlBar').addChild('vjsEpisodeList', {});
       } 
       // destroy player on unmount
       componentWillUnmount() {
@@ -32,7 +27,6 @@ class VideoPlayer extends Component {
         }
       }
       handleClick = () => {
-        console.log("handleClickPlay", this.player)
         const hasStartedStyle = {
           width: '512px',
           height: '288px',
